@@ -55,3 +55,8 @@
   margin: 0;
   padding: 0;
 }
+.film-list__extra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

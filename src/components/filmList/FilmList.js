@@ -1,31 +1,18 @@
 import React from 'react';
 import './FilmList.css';
 
-function FilmList() {
+function FilmList({movies}) {
   return (
     <section>
       <ul className='film-list'>
-        <li className='film-list__element'>
-          <img className='film-list__image' src="https://picsum.photos/id/237/200/300"/>
-          <div className='film-list__content'>
-            <h3 className='film-list__title'>Title</h3>
-            <p className='film-list__text'>Text here</p>
+        {movies.length > 0 ? movies.map((movie) => <li className='film-list__element'>
+          <img className='film-list__image' src={movie.Poster}/>
+          <h3 className='film-list__title'>{movie.Title}</h3>
+          <div className="film-list__extra">
+              <p className='film-list__text'>{movie.Year}</p>
+              <p className='film-list__text'>{movie.Type}</p>
           </div>
-        </li>
-        <li className='film-list__element'>
-          <img className='film-list__image' src="https://picsum.photos/id/237/200/300"/>
-          <div className='film-list__content'>
-            <h3 className='film-list__title'>Title</h3>
-            <p className='film-list__text'>Text here</p>
-          </div>
-        </li>
-        <li className='film-list__element'>
-          <img className='film-list__image' src="https://picsum.photos/id/237/200/300"/>
-          <div className='film-list__content'>
-            <h3 className='film-list__title'>Title</h3>
-            <p className='film-list__text'>Text here</p>
-          </div>
-        </li>
+        </li>) : <div>Hi</div>}
       </ul>
     </section>
   )
