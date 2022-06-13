@@ -10,6 +10,7 @@
   background-color: rgb(255, 219, 87, 0.5);
   padding: 24px;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .film-list__element {
@@ -40,6 +41,8 @@
   align-items: center;
   visibility: hidden;
   border-radius: 5px;
+  padding: 24px;
+  box-sizing: border-box;
 }
 
 .film-list__element:hover .film-list__content {

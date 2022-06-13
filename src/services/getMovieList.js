@@ -20,5 +20,4 @@ export default function getMovies({keyword = 'inception'} = {}) {
       });
       return movies;
     });
-  // //  Datos mockeados hasta terminar maquetacion
 }
