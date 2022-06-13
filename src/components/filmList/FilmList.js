@@ -7,7 +7,7 @@ function FilmList({movies}) {
       <ul className='film-list'>
         {movies.length > 0 ? movies.map((movie) => <li className='film-list__element'>
           <img className='film-list__image' src={movie.Poster}/>
-          <div class="film-list__content">
+          <div className="film-list__content">
             <h3 className='film-list__title'>{movie.Title}</h3>
             <div className="film-list__extra">
                 <p className='film-list__text'>{movie.Year}</p>
